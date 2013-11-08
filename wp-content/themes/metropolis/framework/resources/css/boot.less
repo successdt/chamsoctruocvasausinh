@@ -1,0 +1,278 @@
+//=======================================
+// Boot file by THB
+// v.1.0.1
+// 31.01.2012
+//=======================================
+// 
+// 1.  Clear
+// 2.  Layout
+// 3.  Borders
+// 4.  Gradients
+// 5.  Transitions
+// 6.  Transformation
+// 7.  Element appearance
+// 8.  Selection color
+// 9.  Form input elements
+// 10. Color Utilities
+//
+// ============================
+
+// Clear
+.clear() {
+	clear   : both;
+	display : block;
+	overflow: hidden;
+}
+
+.clearfix() {
+	zoom: 1;
+	
+	&:after {
+	    display   : block;
+	    content   : ".";
+	    height    : 0;
+	    clear     : both;
+		visibility: hidden;
+	}
+}
+
+// Layout
+.size(@width, @height) {
+	width : @width;
+	height: @height;
+}
+
+.square(@size) {
+	.size(@size, @size);
+}
+
+.circle(@size) {
+	.square(@size);
+	.border-radius(@size);
+	line-height: @size;
+	text-align : center;
+}
+
+// Borders
+.border-radius(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius   : @radius;
+	border-radius        : @radius;
+}
+
+.border-radius-top(@radius: 5px) {
+	-webkit-border-top-left-radius : @radius;
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topleft     : @radius;
+	-moz-border-radius-topright    : @radius;
+	border-top-left-radius         : @radius;
+	border-top-right-radius        : @radius;
+}
+
+.border-radius-bottom(@radius: 5px) {
+	-webkit-border-bottom-left-radius : @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomleft     : @radius;
+	-moz-border-radius-bottomright    : @radius;
+	border-bottom-left-radius         : @radius;
+	border-bottom-right-radius        : @radius;
+}
+
+.border-radius-right(@radius: 5px) {
+	-webkit-border-top-right-radius   : @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-topright       : @radius;
+	-moz-border-radius-bottomright    : @radius;
+	border-top-right-radius           : @radius;
+	border-bottom-right-radius        : @radius;
+}
+
+.border-radius-left(@radius: 5px) {
+	-webkit-border-top-left-radius   : @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-topleft       : @radius;
+	-moz-border-radius-bottomleft    : @radius;
+	border-top-left-radius           : @radius;
+	border-bottom-left-radius        : @radius;
+}
+
+.border-radius-top-left(@radius: 5px) {
+	-webkit-border-top-left-radius : @radius;
+	-moz-border-radius-topleft     : @radius;
+	border-top-left-radius         : @radius;
+}
+
+.border-radius-bottom-left(@radius: 5px) {
+	-webkit-border-bottom-left-radius : @radius;
+	-moz-border-radius-bottomleft     : @radius;
+	border-bottom-left-radius         : @radius;
+}
+
+.border-radius-top-right(@radius: 5px) {
+	-webkit-border-top-right-radius   : @radius;
+	-moz-border-radius-topright       : @radius;
+	border-top-right-radius           : @radius;
+}
+
+.border-radius-bottom-right(@radius: 5px) {
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomright    : @radius;
+	border-bottom-right-radius        : @radius;
+}
+
+// Gradients
+.vertical-gradient(@top: #555, @bottom: #333) {
+	background-color : @bottom;
+	background-repeat: repeat-x;
+	background-image : -khtml-gradient(linear, left top, left bottom, from(@top), to(@bottom));
+	background-image : -moz-linear-gradient(top, @top, @bottom);
+	background-image : -ms-linear-gradient(top, @top, @bottom);
+	background-image : -webkit-gradient(linear, left top, left bottom, color-stop(0%, @top), color-stop(100%, @bottom));
+	background-image : -webkit-linear-gradient(top, @top, @bottom);
+	background-image : -o-linear-gradient(top, @top, @bottom);
+	background-image : linear-gradient(top, @top, @bottom);
+}
+
+.horizontal-gradient(@left: #555, @right: #333) {
+	background-color : @right;
+	background-repeat: repeat-x;
+	background-image : -khtml-gradient(linear, left top, right top, from(@left), to(@right));
+	background-image : -moz-linear-gradient(left, @left, @right);
+	background-image : -ms-linear-gradient(left, @left, @right);
+	background-image : -webkit-gradient(linear, left top, right top, color-stop(0%, @left), color-stop(100%, @right));
+	background-image : -webkit-linear-gradient(left, @left, @right);
+	background-image : -o-linear-gradient(left, @left, @right);
+	background-image : linear-gradient(left, @left, @right);
+}
+
+.directional-gradient(@startColor: #555, @endColor: #333, @deg: 45deg) {
+	background-color : @endColor;
+	background-repeat: repeat-x;
+	background-image : -moz-linear-gradient(-@deg, @startColor, @endColor);
+	background-image : -ms-linear-gradient(-@deg, @startColor, @endColor);
+	background-image : -webkit-linear-gradient(-@deg, @startColor, @endColor);
+	background-image : -o-linear-gradient(-@deg, @startColor, @endColor);
+	background-image : linear-gradient(-@deg, @startColor, @endColor);
+}
+
+// Transitions
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition   : @transition;
+	transition        : @transition;
+}
+
+.transitions(@property, @duration, @timing) {
+	-webkit-transition-property       : @property;
+	-webkit-transition-duration       : @duration;
+	-webkit-transition-timing-function: @timing;
+	-moz-transition-property          : @property;
+	-moz-transition-duration          : @duration;
+	-moz-transition-timing-function   : @timing;
+	transition-property               : @property;
+	transition-duration               : @duration;
+	transition-timing-function        : @timing;
+}
+
+// Transformations
+.rotate(@deg: 180deg) {
+	-moz-transform   : rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-o-transform     : rotate(@deg);
+	-ms-transform    : rotate(@deg);
+	transform        : rotate(@deg);
+}
+
+.scale(@scale) {
+	-moz-transform   : scale(@scale);
+	-webkit-transform: scale(@scale);
+	-o-transform     : scale(@scale);
+	-ms-transform    : scale(@scale);
+	transform        : scale(@scale);	
+}
+
+// Element appearance
+.opacity(@opacity: 100) {
+	-khtml-opacity: @opacity / 100;
+	-moz-opacity  : @opacity / 100;
+	opacity       : @opacity / 100;
+	filter        : e(%("alpha(opacity=%d)", @opacity)); // IE-7
+	-ms-filter    : e(%('"progid:DXImageTransform.Microsoft.Alpha(Opacity=%d)"', @opacity)); //IE-8
+}
+
+.box-shadow(@x: 0, @y: 0, @blur: 0, @distance: 0, @color) {
+	-webkit-box-shadow: @x @y @blur @distance @color;
+	-moz-box-shadow   : @x @y @blur @distance @color;
+	box-shadow        : @x @y @blur @distance @color;
+}
+
+.box-shadow-inset(@x: 0, @y: 0, @blur: 0, @distance: 0, @color) {
+	-webkit-box-shadow: inset @x @y @blur @distance @color;
+	-moz-box-shadow   : inset @x @y @blur @distance @color;
+	box-shadow        : inset @x @y @blur @distance @color;
+}
+
+.box-sizing(@sizing) {
+	-webkit-box-sizing: @sizing;
+	-moz-box-sizing   : @sizing;
+	-ms-box-sizing    : @sizing;
+	box-sizing        : @sizing;
+}
+
+.appearance(@appearance) {
+	-webkit-appearance: @appearance;
+	-moz-appearance: @appearance;
+	appearance: @appearance;
+}
+
+// Selection color
+.selection(@background, @color) {
+	::-webkit-selection {
+		color           : @color;
+		background-color: @background;
+		text-shadow     : none; // Remove text-shadow in selection highlight: h5bp.com/i
+	}
+	::-moz-selection {
+		color           : @color;
+		background-color: @background;
+		text-shadow     : none; // Remove text-shadow in selection highlight: h5bp.com/i
+	}
+	::selection {
+		color           : @color;
+		background-color: @background;
+		text-shadow     : none; // Remove text-shadow in selection highlight: h5bp.com/i
+	}
+}
+
+// Form input elements
+.button() {
+	-webkit-appearance: button;
+	cursor            : pointer;
+	margin            : 0;
+	padding           : 0;
+}
+
+.placeholder(@color) {
+	:-moz-placeholder {
+		color: @color;
+	}
+	::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
+.user-select(@value) {
+	-moz-user-select: @value;
+	-webkit-user-select: @value;
+	-o-user-select: @value;
+	-ms-user-select: @value;
+	user-select: @value;
+}
+
+// Color utilities
+.alpha-background(@color: #fff, @alpha: .1) {
+	@hue            : hue(@color);
+	@saturation     : saturation(@color);
+	@lightness      : lightness(@color);
+	background-color: hsla(@hue, @saturation, @lightness, @alpha);
+}

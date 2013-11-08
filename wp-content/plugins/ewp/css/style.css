@@ -1,0 +1,373 @@
+/*style for ewp-ticket plugin*/
+.ticket-wrapper {
+	background: #104282 url(../images/search1408.jpg) repeat-x top !important;
+	height: 335px !important;
+	width: 470px !important;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	position: relative;
+	float: left;
+	padding: 10px 0 0 !important;
+	-moz-box-shadow: 0 1 5px #888;
+	-webkit-box-shadow: 0 1 5px #888;
+	box-shadow: 0 1px 5px #888;
+}
+.ticket-title {
+	margin: 0 20px 0;
+	border-bottom: 1px dotted #2C83E1;
+}
+.ticket-title h1 {
+	font-size: 24px;
+	background: url(../images/Plane.png) no-repeat center left;
+	text-transform: uppercase;
+	text-shadow: 0 1px 5px #000;
+	padding-left: 50px;
+	padding-top: 0;
+	color: #FFF;
+}
+.ticket-content {
+	color: #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px dotted #2C83E1;
+	margin: 0 20px;
+}
+.ticket-content .one-second {
+	width: 200px;
+	height: auto;
+	display: inline-block;
+	margin-left: 10px;
+}
+.ticket-content .start-value,.ticket-content .finish-value {
+	width: 180px;
+	background-color: #FFF;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.ticket-content select {
+	height: 25px;
+	margin: 3px 0px;
+}
+.ticket-content table , .ticket-content td {
+	border: none;
+	color: #FFF;
+	width: auto;
+	text-align: left;
+	font-weight: normal;
+}
+.ticket-content table td {
+	padding: 0px 5px;
+}
+.ticket-content table .select-desc {
+	color: #CCC;
+	font-size: 12px;
+}
+.ticket-content table select {
+	width: 90px;
+}
+.ticket-submit {
+	margin-top: 10px;
+}
+.ticket-submit button, .ticket-submit a, #info-reg button  {
+	border-radius: 5px;
+	background-color: #2268AA;
+	color: #FFF;
+	box-shadow: none;
+}
+
+.ticket-submit button:hover, .ticket-submit a:hover{
+	background-color: #238CF4;
+}
+
+.ticket-submit button {
+	padding: 10px 20px;
+	font-size: 24px;
+	cursor: pointer;
+	float: left;
+	text-shadow: none ;
+	margin-top: 10px;
+}
+.ticket-submit a {
+	float: right;
+	padding: 15px;
+	margin-right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+.ticket-popup {
+	height: 370px;
+	width: auto;
+	background-color: #FCFBBB;
+	position: absolute;
+	left: 20px;
+	display: none;
+	border-radius: 5px;
+}
+.ticket-popup .popup-title, #info-form h6 {
+	margin: 10px;
+	background-color: #F6A828;
+	color: #FFF;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.ticket-popup table, .ticket-popup table td {
+	border: none;
+	text-align: left;
+	vertical-align: top;
+}
+.ticket-popup table td + td {
+/*	border-left: 1px solid #EEE;*/
+}
+.ticket-popup td {
+	min-width: 80px;
+}
+.ticket-popup td span {
+	display: block;
+	margin: 0;
+	padding: 0;
+	
+}
+.ticket-popup td h6 {
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	color: #F6A828;
+}
+.ticket-popup td a {
+	text-decoration: none;
+	color: #000;
+}
+.ticket-popup td a:hover {
+	color: #F6A828;
+}
+#info-form h6 {
+	font-size: 14px;
+}
+#info-form table , #info-form table td{
+	border: none;
+	text-align: left;
+	color: #000;
+	font-size: 16px;
+}
+#info-form table .required {
+	color: #F00;
+	float: right;
+}
+#info-form input, #info-form textarea {
+    min-width: 356px;
+    margin-top: 10px;
+    border: 1px solid #b2b2b2;
+	padding: 8px 6px;
+	border-radius: 5px;
+}
+#info-form textarea {
+	margin: 10px 0px 0px;
+	width: 360px;
+	height: 93px;
+}
+
+.home-banner {
+	width: 470px;
+	float: left;
+	height: 337px;
+	margin-left: 20px;
+	background: #104282 url(../images/search1408.jpg) repeat-x top !important;
+	padding-bottom: 8px;
+	border-radius: 8px;
+	
+}
+.home-banner img{
+	width: 430px;
+	margin: 20px;
+	height: 305px;
+}
+
+.home-block {
+	width: 960px;
+	float: left;
+	margin-top: 20px;
+	background: url('../images/bg-featured-box.jpg');
+	border: 1px solid #DBDAD5;
+}
+.home-row {
+	width: 960px;
+	margin-top: 20px;
+	float: left;
+}
+.info-hotline {
+	margin-top: 86px;
+}
+#info-reg {
+	width: 400px;
+	float: left;
+	margin: 10px 20px;
+}
+#info-reg .title {
+	color: #F14902;
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+#info-reg .form {
+	margin-top: 0px;
+	display: table-row;
+}
+#info-reg input {
+	width: 220px;
+	border-radius: 25px 0 0 25px;
+	border: none;
+	font-size: 20px;
+	border: 2px solid #EAEAEA;	
+	border-right: none;
+	display: table-cell;
+	height: 47px;
+	float: left;
+	padding-left: 25px;
+}
+#info-reg button {
+ 	background: #FFF;
+ 	border-radius: 0px 27px 27px 0px;
+ 	color: #CF7426;
+ 	text-shadow: none;
+ 	cursor: pointer;
+ 	font-size: 20px;
+ 	border: 2px solid #EAEAEA;
+ 	display: table-cell;
+ 	float: left;
+ 	height: 51px;
+ 	
+}
+#info-reg button:hover {
+	color: #414141;
+}
+#info-reg input:focus {
+	outline: none;
+}
+.hotline .col {
+	width: 215px;
+	float: left;
+	margin: 3px 20px;
+	text-align: center;
+}
+.hotline-number {
+	display: block;
+	font-size: 28px;
+	color: #F14902;
+	margin-top: 15px;
+	font-weight: bold;
+	text-shadow:     
+		-1px -1px 0 #ffffff,  
+	    1px -1px 0 #ffffff,
+	    -1px 1px 0 #ffffff,
+	    1px 1px 0 #ffffff;
+}
+.home-cell {
+	width: 468px;
+	height: 300px;
+	float: left;
+	margin-top: 20px;
+	background: #104282;
+
+	border: 10px solid #FFF;
+}
+.home-cell p {
+
+	margin: 20px;
+}
+.promo-news, .facebook-page {
+	margin-left: 19px;
+}
+.facebook-page, .home-address{
+	height: 272px;
+}
+.facebook-page {
+
+}
+.home-cell h5 {
+	background: url('../images/hot_news.png') no-repeat #98CE68;
+	padding: 10px 40px 5px;
+	font-size: 24px;
+	color: #FFF;
+}
+.booking-hint h5 {
+	background: url('../images/star.png') no-repeat #6BCBCA;
+	padding: 10px 40px 5px;
+}
+.booking-hint .text {
+	margin: 0 10px;
+}
+#next, #prev {
+	display:none
+}
+.carousel{
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 5px 0 0 5px;	
+	float: left;
+	padding: 15px;
+	font-size: 16px;
+}
+.carousel-wrapper {
+	background-image: -ms-linear-gradient(bottom right, #1A97BD 0%, #2191D1 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(bottom right, #1A97BD 0%, #2191D1 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(bottom right, #1A97BD 0%, #2191D1 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #1A97BD), color-stop(1, #2191D1));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(bottom right, #1A97BD 0%, #2191D1 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to top left, #1A97BD 0%, #2191D1 100%);
+	
+	border: 1px solid #1A97BD;
+	overflow: hidden;
+	height: 50px;
+	width: 960px;
+	margin-top: 20px;
+	float: left;
+}
+.carousel-wrapper table {
+	position: relative;
+	float: left !important;
+	width: 750px;
+	
+}
+.carousel-wrapper table td {
+	padding: 0;
+}
+.carousel-wrapper img {
+	height: 50px;
+}
+.home-address .text {
+	width: 185px;
+	margin: 0px 5px;
+}
+
+.anythingControls {
+}
+.ticket-popup .header {
+	background: none;
+	height: auto;
+}
+.popup-content {
+	margin: 10px;
+}
+.home-block, .home-cell{
+	background: url('../images/bg-featured-box.jpg');
+	border: 1px solid #DBDAD5;
+	color: #414141 !important;
+}
+.home-cell a {
+	color: #414141 !important;
+}

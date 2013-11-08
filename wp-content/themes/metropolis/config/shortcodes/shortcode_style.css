@@ -1,0 +1,27 @@
+/*
+	Author: The Happy Bit
+	Author URI: http://thehappybit.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+*/
+#sc-form {  }
+#sc-form h3 { font-size: 14px; display: block; color: #333; font-weight: normal; font-style: normal; text-transform: uppercase; }
+
+#sc-container { margin: 15px 0 10px; border: 1px solid #ccc; }
+.sc-row { padding: 8px 10px; background-color: #fff; clear: both; }
+.left-col { float: left; width: 130px; margin-right: 10px; }
+.right-col {  }
+.sc-row label { line-height: 18px; }
+.sc-row input[type="text"], .sc-row textarea { padding: 5px 10px; }
+.sc-row input[type="checkbox"] {  }
+.sc-row.border { border-bottom: 1px solid #e6e6e6; }
+
+.sc-footer-row {  }
+#cancel { float: left;
+/*  background: #cf2417 !important; color: #fff !important; border-color: #b51e13 !important; */
+ }
+#insert { float: right; background: #78a539 !important; color: #fff !important; border-color: #668c31 !important; }
+#insert:hover, #cancel:hover { border: 1px solid rgba(0,0,0,.8) !important; }
+
+.clear { display: block; clear: both; }

@@ -1,0 +1,83 @@
+* html div#fl813691 {
+    overflow: hidden;
+    position: absolute;
+}
+#fl813691 {
+    bottom: 0;
+    color: #666666;
+    height: 130px;
+    position: fixed;
+    right: 0;
+    z-index:99999;
+	display: block;
+}
+#eb951855 {
+    background: url("../images/fullborder_bg_right.gif") no-repeat scroll right top transparent;
+    width: 300px;
+	padding-right: 7px;
+    z-index:99999;
+}
+#cob263512 {
+    background: url("../images/fullborder_bg.gif") no-repeat scroll left top transparent;
+	height:165px;
+    padding-left: 7px;
+    z-index:99999;
+}
+#coh963846 {
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    z-index:99999;
+}
+#coh963846 a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#coc67178 {
+    float: right;
+    height: 15px;
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+#coc67178 li {
+    display: inline;
+}
+#coc67178 li a {
+    background-image: url("../images/button.gif");
+    background-repeat: no-repeat;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding-top: 15px;
+    width: 30px;
+}
+#coc67178 li a.close {
+    background-position: 0 0;
+}
+#coc67178 li a.close:hover {
+    background-position: 0 -15px;
+}
+#coc67178 li a.min {
+    background-position: -30px 0;
+}
+#coc67178 li a.min:hover {
+    background-position: -30px -15px;
+}
+#coc67178 li a.max {
+    background-position: -60px 0;
+}
+#coc67178 li a.max:hover {
+    background-position: -60px -15px;
+}
+#co453569 {
+    background-color: #ECECEC;
+    border-style: solid;
+    line-height: 1.6em;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}

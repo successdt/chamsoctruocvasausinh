@@ -1,0 +1,505 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Metropolis\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-24 09:59+0100\n"
+"PO-Revision-Date: 2012-04-24 10:00+0100\n"
+"Last-Translator: The Happy Bit <thehappybit@gmail.com>\n"
+"Language-Team: The Happy Bit\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:12
+msgid "Not Found"
+msgstr ""
+
+#: ../404.php:13
+msgid "Error 404"
+msgstr ""
+
+#: ../404.php:19
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr ""
+
+#: ../archive.php:11
+#: ../archive.php:20
+msgid "Archives"
+msgstr ""
+
+#: ../archives.php:21
+msgid "Search:"
+msgstr ""
+
+#: ../archives.php:27
+msgid "Last 30 posts:"
+msgstr ""
+
+#: ../archives.php:43
+msgid "Archives by Month:"
+msgstr ""
+
+#: ../archives.php:48
+msgid "Archives by Subject:"
+msgstr ""
+
+#: ../attachment.php:21
+#, php-format
+msgid "Return to %s"
+msgstr ""
+
+#: ../author.php:18
+msgid "Author"
+msgstr ""
+
+#: ../category.php:13
+msgid "Category"
+msgstr ""
+
+#: ../comment.php:16
+msgid "&mdash; Reply"
+msgstr ""
+
+#: ../comment.php:24
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../comment.php:28
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../comment.php:42
+msgid "Pingback:"
+msgstr ""
+
+#: ../comment.php:42
+msgid "(Edit)"
+msgstr ""
+
+#: ../comments.php:16
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../comments.php:32
+msgid "No Comments"
+msgstr ""
+
+#: ../comments.php:32
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:32
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:35
+#: ../comments.php:52
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:36
+#: ../comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: ../search.php:11
+#, php-format
+msgid "Search Results for: &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../search.php:22
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr ""
+
+#: ../single-works.php:113
+msgid "Date :"
+msgstr ""
+
+#: ../single-works.php:122
+msgid "Skills : "
+msgstr ""
+
+#: ../single.php:32
+#: ../single.php:115
+msgid "by"
+msgstr ""
+
+#: ../single.php:72
+msgid "Pages"
+msgstr ""
+
+#: ../single.php:85
+msgid "Posted on"
+msgstr ""
+
+#: ../single.php:93
+#: ../single.php:94
+msgid "0 comments"
+msgstr ""
+
+#: ../single.php:93
+#: ../single.php:94
+msgid "1 comment"
+msgstr ""
+
+#: ../single.php:101
+msgid "in"
+msgstr ""
+
+#: ../single.php:108
+msgid "Tags : "
+msgstr ""
+
+#: ../tag.php:13
+msgid "Tag"
+msgstr ""
+
+#: ../taxonomy.php:13
+msgid "Taxonomy"
+msgstr ""
+
+#: ../template-contact.php:64
+msgid "Contact info"
+msgstr ""
+
+#: ../template-contact.php:70
+msgid "Phone: "
+msgstr ""
+
+#: ../template-contact.php:74
+msgid "Mobile: "
+msgstr ""
+
+#: ../template-contact.php:78
+msgid "Fax: "
+msgstr ""
+
+#: ../template-contact.php:82
+msgid "Email: "
+msgstr ""
+
+#: ../template-contact.php:92
+msgid "Send a message"
+msgstr ""
+
+#: ../config/thb_functions.php:531
+msgid "Image"
+msgstr ""
+
+#: ../config/thb_functions.php:534
+msgid "Types"
+msgstr ""
+
+#: ../config/thb_functions.php:554
+msgid "None"
+msgstr ""
+
+#: ../config/components/related-entries.php:24
+msgid "Click for more details"
+msgstr ""
+
+#: ../config/post_types/Pages.php:16
+msgid "Subtitle"
+msgstr ""
+
+#: ../config/post_types/Pages.php:30
+#: ../config/post_types/Posts.php:8
+msgid "Extra"
+msgstr ""
+
+#: ../config/post_types/Pages.php:44
+#: ../config/post_types/Posts.php:22
+msgid "Slideshow"
+msgstr ""
+
+#: ../config/post_types/Pages.php:45
+msgid "Sidebar"
+msgstr ""
+
+#: ../config/post_types/Pages.php:60
+msgid "Blog options"
+msgstr ""
+
+#: ../config/post_types/Posts.php:23
+msgid "SEO"
+msgstr ""
+
+#: ../config/post_types/Testimonials.php:27
+msgid "Testimonial info"
+msgstr ""
+
+#: ../config/post_types/Works.php:26
+msgid "Additional side informations"
+msgstr ""
+
+#: ../config/resources/contact-form.php:13
+msgid "Your name"
+msgstr ""
+
+#: ../config/resources/contact-form.php:17
+msgid "Your email"
+msgstr ""
+
+#: ../config/resources/contact-form.php:22
+msgid "Message"
+msgstr ""
+
+#: ../config/resources/contact-form.php:25
+msgid "Send"
+msgstr ""
+
+#: ../config/resources/custom-feed.php:3
+msgid "Alternate RSS feed"
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:30
+#: ../config/taxonomies/TypesTaxonomy.php:48
+msgid "Search "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:31
+#: ../config/taxonomies/TypesTaxonomy.php:49
+msgid "Popular "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:32
+#: ../config/taxonomies/TypesTaxonomy.php:50
+msgid "All "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:35
+#: ../config/taxonomies/TypesTaxonomy.php:53
+msgid "Edit "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:36
+#: ../config/taxonomies/TypesTaxonomy.php:54
+msgid "Update "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:37
+#: ../config/taxonomies/TypesTaxonomy.php:55
+msgid "Add New "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:38
+#: ../config/taxonomies/TypesTaxonomy.php:56
+msgid "New "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:39
+#: ../config/taxonomies/TypesTaxonomy.php:57
+msgid "Separate "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:40
+#: ../config/taxonomies/TypesTaxonomy.php:58
+msgid "Add or remove "
+msgstr ""
+
+#: ../config/taxonomies/TypesTaxonomy.php:41
+#: ../config/taxonomies/TypesTaxonomy.php:59
+msgid "Choose from the most used "
+msgstr ""
+
+#: ../config/widgets/contact/widget_contact.php:18
+msgid "Tel"
+msgstr ""
+
+#: ../config/widgets/contact/widget_contact.php:22
+msgid "Mobile"
+msgstr ""
+
+#: ../config/widgets/contact/widget_contact.php:26
+msgid "Fax"
+msgstr ""
+
+#: ../config/widgets/contact/widget_contact.php:30
+msgid "Email"
+msgstr ""
+
+#: ../config/widgets/news/category.php:97
+#: ../config/widgets/news/news.php:115
+msgid "There aren't posts to be shown."
+msgstr ""
+
+#: ../config/widgets/pages/pages.php:151
+msgid "Read more"
+msgstr ""
+
+#: ../config/widgets/twitter/widget_twitter.php:80
+msgid "...loading Twitter Stream"
+msgstr ""
+
+#: ../framework/init.php:313
+msgid "Use this Image"
+msgstr ""
+
+#: ../framework/init.php:316
+#, php-format
+msgid "Use as %s"
+msgstr ""
+
+#: ../framework/core/admin.common.php:45
+msgid "Add New"
+msgstr ""
+
+#: ../framework/core/admin.common.php:49
+msgid "View "
+msgstr ""
+
+#: ../framework/core/admin.common.php:51
+#: ../framework/core/admin.common.php:52
+msgid "No "
+msgstr ""
+
+#: ../framework/core/admin.page.php:476
+msgid "Save"
+msgstr ""
+
+#: ../framework/core/admin.page.php:589
+#: ../framework/core/admin.page.php:733
+msgid "All saved!"
+msgstr ""
+
+#: ../framework/core/frontend.common.php:367
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../framework/core/frontend.common.php:447
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: ../framework/core/frontend.common.php:450
+#: ../framework/core/frontend.common.php:467
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../framework/core/logic.common.php:27
+msgid "Please fill in all the required fields!"
+msgstr ""
+
+#: ../framework/core/logic.common.php:59
+msgid "Email sent successfully!"
+msgstr ""
+
+#: ../framework/core/logic.common.php:62
+msgid "An error has occurred while sending your email!"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:28
+#: ../framework/core/tpl/field_upload.php:22
+msgid "Upload"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:32
+msgid "Type"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:37
+msgid "Picture"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:38
+msgid "Video"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:47
+msgid "Title"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:51
+msgid "URL"
+msgstr ""
+
+#: ../framework/core/tpl/field_slide.php:55
+msgid "Text"
+msgstr ""
+
+#: ../loop/archive.php:75
+#: ../loop/blog-3.php:91
+#: ../loop/blog.php:96
+msgid "0"
+msgstr ""
+
+#: ../loop/archive.php:75
+#: ../loop/blog-3.php:91
+#: ../loop/blog.php:96
+msgid "1"
+msgstr ""
+
+#: ../loop/archive.php:106
+msgid "Previous Entries &raquo;"
+msgstr ""
+
+#: ../loop/archive.php:107
+msgid "&laquo; Next Entries"
+msgstr ""
+
+#: ../loop/archive.php:117
+#: ../loop/blog-2.php:142
+#: ../loop/blog-3.php:143
+#: ../loop/blog.php:142
+msgid "Sorry, there aren't posts to be shown!"
+msgstr ""
+
+#: ../loop/attachments.php:37
+#, php-format
+msgid "<span class=\"%1$s\">By</span> %2$s"
+msgstr ""
+
+#: ../loop/attachments.php:48
+#, php-format
+msgid "<span class=\"%1$s\">Published</span> %2$s"
+msgstr ""
+
+#: ../loop/attachments.php:58
+#, php-format
+msgid "Full size is %s pixels"
+msgstr ""
+
+#: ../loop/attachments.php:61
+msgid "Link to full-size image"
+msgstr ""
+
+#: ../loop/blog-2.php:128
+#: ../loop/blog-3.php:129
+#: ../loop/blog.php:128
+msgid "Previous entries &raquo;"
+msgstr ""
+
+#: ../loop/blog-2.php:131
+#: ../loop/blog-3.php:132
+#: ../loop/blog.php:131
+msgid "&laquo; Next entries"
+msgstr ""
+
+#: ../loop/portfolio-filter.php:23
+msgid "All"
+msgstr ""
+
+#: ../loop/slideshow.php:128
+#: ../loop/slideshow.php:145
+msgid "Previous slide"
+msgstr ""
+
+#: ../loop/slideshow.php:129
+#: ../loop/slideshow.php:146
+msgid "Next slide"
+msgstr ""
+
+#: ../loop/testimonials-alt.php:18
+#: ../loop/testimonials.php:18
+msgid "Sorry, but there aren't testimonials to show."
+msgstr ""
+

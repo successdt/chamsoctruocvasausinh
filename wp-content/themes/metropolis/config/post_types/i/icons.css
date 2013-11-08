@@ -1,0 +1,16 @@
+/* @group menu icons */
+#menu-posts-works .wp-menu-image {
+	background: url(post-works.png) no-repeat 6px -17px !important;
+}
+
+#menu-posts-testimonials .wp-menu-image {
+	background: url(post-testimonials.png) no-repeat 6px -17px !important;
+}
+
+#menu-posts-works:hover .wp-menu-image,
+#menu-posts-works.wp-has-current-submenu .wp-menu-image,
+#menu-posts-testimonials:hover .wp-menu-image,
+#menu-posts-testimonials.wp-has-current-submenu .wp-menu-image {
+	background-position: 6px 7px!important;
+}
+/* @end */

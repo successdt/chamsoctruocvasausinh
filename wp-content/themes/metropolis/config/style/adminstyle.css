@@ -1,0 +1,22 @@
+.background[data-context="res_header"] .color-text,
+.background[data-context="res_header"] .preview .text,
+.background[data-context="res_bottomline"] .color-headline,
+.background[data-context="res_bottomline"] .preview .headline {
+	display: none;
+}
+
+.duplicable.upload-container .input-labels table tr.picture {
+	visibility: hidden;
+}
+
+.duplicable.upload-container .input-labels table tr.picture td {
+	display: none;
+}
+
+.duplicable.upload-container .input-labels table tr.picture.video {
+	visibility: visible;
+}
+
+.duplicable.upload-container .input-labels table tr.picture.video td {
+	display: table-cell;
+}

@@ -1,0 +1,1196 @@
+@import "boot.less";
+/*
+	Author: The Happy Bit
+	Author URI: http://thehappybit.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 2.0
+*/
+
+// Colors
+// ----------------------------------------------------------------------------
+@red       : #dc373e;
+@green     : #7ab176;
+@blue      : #7694B1;
+@dark-grey : #808080;
+@medium-grey: #e0e0e0;
+@light-grey: #f9f9f9;
+
+// Widths
+// ----------------------------------------------------------------------------
+@container-width: 841px;
+@tabnav-width: 185px;
+@hbrow-width: 630px;
+@hbrow-extended-width: 823px;
+
+// Mixins
+// ----------------------------------------------------------------------------
+.input-shadows(@border-color) {
+	-webkit-box-shadow: 0 0 0 1px darken(@border-color, 5), inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 1px rgba(0,0,0,.02);
+	-moz-box-shadow   : 0 0 0 1px darken(@border-color, 5), inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 1px rgba(0,0,0,.02);
+	box-shadow        : 0 0 0 1px darken(@border-color, 5), inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 1px rgba(0,0,0,.02);
+}
+
+.button-style(@gradient-top, @gradient-bottom, @border-color, @text-shadow: rgba(0,0,0,.5)) {
+	.vertical-gradient(@gradient-top, @gradient-bottom);
+	.input-shadows(@border-color);
+	text-shadow: 0 -1px 0 @text-shadow;
+}
+
+// Button constructor
+.btn(@main-color) {
+	.button-style(@main-color, darken(@main-color, 10%), darken(@main-color, 13%));
+}
+.btn-hover(@main-color) {
+	.vertical-gradient(@main-color, darken(@main-color, 5%));
+}
+.btn-active(@main-color) {
+	.vertical-gradient(darken(@main-color, 10%), @main-color);
+}
+
+// ----------------------------------------------------------------------------
+// General
+// ----------------------------------------------------------------------------
+#hb-wrapper,
+#hb-header,
+#hb-credits,
+.hb-panel,
+.hb-nav,
+.hb-content,
+.hb-section,
+.img-container,
+.select-wrapper,
+.select-wrapper span,
+input,
+select {
+	.box-sizing(border-box);
+}
+
+.hb-nav,
+.hb-content {
+	float: left;
+	position: relative;
+	display: inline;
+}
+
+#hb-wrapper {
+	width: @container-width;
+	position: relative;
+	margin: 0 auto;
+}
+
+// Header
+// ----------------------------------------------------------------------------
+#hb-header {
+	.clearfix;
+	padding: 20px 8px;
+
+	h2 {
+		font-size: 22px;
+		line-height: 1;
+		margin: 0;
+	}
+	
+	p {
+		margin: 0;
+		color: #999;
+		font-family: Georgia, serif;
+		font-style: italic;
+	}
+}
+
+// Footer credits
+// ----------------------------------------------------------------------------
+#hb-credits {
+	.clearfix;
+	font-family: Georgia, serif;
+	font-style: italic;
+	padding: 4px 8px;
+	color: #999;
+	font-size: 11px;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: #666;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// Notice box
+// ----------------------------------------------------------------------------
+.notice {
+	position: absolute;
+	top: 20px;
+	width: @container-width - 2px;
+	text-align: center;
+	padding: 10px 0;
+	z-index: 1000;
+	.border-radius(2px);
+	font-size: 13px;
+	
+	&.success {
+		color: #a47643;
+		background: #FFFFE0;
+		border: 1px solid #E6DB55;
+	}	
+
+	p {
+		margin: 0;
+		font-weight: bold;
+	}
+}
+
+// Reset/delete button
+// ----------------------------------------------------------------------------
+.reset-upload-btn,
+.remove-upload-btn {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	.border-radius(2px);
+	.btn(lighten(@red, 10));
+
+	&:hover {
+		color: #fff;
+		cursor: pointer;
+		.btn-hover(lighten(@red, 10));
+	}
+
+	&:active {
+		.btn-active(lighten(@red, 10));
+	}
+}
+
+// ----------------------------------------------------------------------------
+.hb-panel {
+	.clearfix;
+	position: relative;
+	padding: 8px;
+	
+	.border-radius(2px);
+	background-color: #ececec;
+	border: 1px solid #ccc;
+
+	// Main navigation
+	// ------------------------------------------------------------------------
+	.hb-nav {
+		width: @tabnav-width;
+		margin-right: 8px;
+
+		ul {
+			margin: 0;
+
+			li {
+				margin-bottom: 4px;
+
+				// Standard menu item 
+				//-------------------------------------------------------------
+				a {
+					.border-radius(2px);
+					display: block;
+					position: relative;
+					padding: 8px;
+					text-decoration: none;
+					color: #999;
+					font-weight: bold;
+					text-shadow: 0 1px 0 #fff;
+
+					img {
+						float: left;
+						margin-right: 8px;
+					}
+
+					&:hover {
+						background-color: #f9f9f9;
+						color: #333;
+					}
+				} 
+
+				// Selected menu item 
+				//-------------------------------------------------------------
+				&.active {
+
+					a {
+						color: #fff;
+						.btn(@dark-grey);
+
+						&:hover {
+							background-color: #999;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// General content style
+	// ------------------------------------------------------------------------
+	.hb-content {
+		width: @hbrow-width;
+
+		.hb-section {
+			border-top: 1px solid #ccc;
+			display: none;
+
+			&.on {
+				display: block;
+			}
+
+			// Help text
+			// ----------------------------------------------------------------
+			.hb-help {
+				width: 220px;
+				float: right;
+				color: #999;
+				font-size: 11px;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		// Save button section
+		// --------------------------------------------------------------------
+		.hb-apply {
+			.clearfix();
+			position: relative;
+			clear: both;
+			top: -1px;
+			padding-top: 8px;
+			border-top: 1px solid #ccc;
+
+			.hb-save {
+				float: right;
+			}
+		}
+	}
+
+	// Input
+	// ------------------------------------------------------------------------
+	.hb-save {
+		input {
+			border: none;
+			.border-radius(2px);
+			padding: 8px 32px;
+			color: #fff;
+			font-weight: bold;
+			.btn(@green);
+
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				.btn-hover(@green);
+			}
+
+			&:active {
+				.btn-active(@green);
+			}
+		}
+	}
+
+	// Info box
+	// ------------------------------------------------------------------------
+	.infobox {
+		.box-sizing(border-box);
+		padding: 20px 40px;
+		color: #777;
+		text-shadow: 0 1px 0 #fff;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+
+		p, ul {
+			margin-top: 0;
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			list-style-type: disc;
+		}
+	}
+
+	// Duplicable page
+	// ------------------------------------------------------------------------
+	&.duplicable-page {
+
+		.hb-content {
+			width: @hbrow-extended-width;
+		}
+
+		.hb-section {
+			border-top: none;
+			display: block;
+		}
+
+
+		.duplicable-section {
+			position: relative;
+			float: left;
+
+			.infobox {
+				width: @hbrow-extended-width;
+			}
+
+			.hb-row:first-of-type,
+			.infobox + .hb-row {
+				border-top: 1px solid #ccc;
+			}
+
+			.hb-row:last-of-type {
+				border-bottom: 1px solid #ccc;
+			}
+
+			.hb-row {
+				width: @hbrow-extended-width - 32px - 2px;
+				position: relative;
+
+				&:hover {
+					.contextual {
+						.opacity(100);
+					}
+				}
+
+				.upload-container {
+					width: 789px;
+				}
+
+				.img-container {
+					float: left;
+				}
+
+				.fields-container {
+					float: left;
+					margin-left: 24px;
+					width: 625px;
+
+					.sub-field {
+						clear: both;
+						margin-bottom: 4px;
+
+						.select-wrapper {
+							margin-bottom: 4px;
+						}
+
+						label {
+							width: 64px;
+							float: left;
+							line-height: 33px;
+							margin-bottom: 0;
+							font-weight: normal;
+							color: #999;
+						}
+					}
+				}
+
+				// Contextual control panel
+	 			// ------------------------------------------------------------
+				.contextual {
+					background: #eee;
+					border: 1px solid #ddd;
+					position: absolute;
+					top: 20px;
+					right: 16px;
+					width: 32px;
+					.border-radius(2px);
+					.opacity(0);
+					.transition(all .2s linear);
+
+					
+
+					// Buttons
+					// --------------------------------------------------------
+					.control {
+						font-weight: bold;
+						display: block;
+						width: 16px;
+						height: 16px;
+						margin: 4px;
+						padding: 4px;
+						line-height: 17px;
+						font-size: 14px;
+						text-align: center;
+						color: #666;
+						text-shadow: 0 1px 0 #fff;
+						cursor: pointer;
+
+						// Move button
+						// ----------------------------------------------------
+						&.move-duplicable-item {
+							font-weight: normal;
+							font-size: 16px;
+							cursor: move;
+						}
+
+						// Remove row button
+						// ----------------------------------------------------
+						&.remove-duplicable-item {
+							&:hover {
+								.btn(@red);
+								.border-radius(2px);
+								color: #fff;
+							}
+
+							&:active {
+								.btn-active(lighten(@red, 10));
+							}
+						}
+					}
+				}
+
+				// Duplicable field switch 
+				// ------------------------------------------------------------
+				&[data-slide-type='video'] {
+					.upload-btn,
+					.reset-upload-btn,
+					img {
+						display: none !important;
+					}
+
+					.img-container {
+						background: #ececec url(../i/video.png) no-repeat center center;
+					}
+				}
+
+				&[data-slide-type='custom'] {
+					.sub-field-title,
+					.sub-field-url {
+						display: none;
+					}
+
+					.sub-field-caption {
+						textarea {
+							height: 104px;
+						}
+					}
+				}
+			}
+
+			/* Drop-here zone
+			------------------------------------------------------------------* */
+			.ui-state-highlight {
+				position: relative;
+				float: left;
+				clear: both;
+				height: 40px;
+				width: 789px;
+				margin: 16px;
+				border: 1px dashed #999;
+				.border-radius(2px);
+			}
+		}
+
+		// Save buttons 
+		// --------------------------------------------------------------------
+		.hb-apply {
+			top: 0;
+			border-top: none;
+
+			.hb-add {
+				float: left;
+
+				.add-btn {
+					width: 29px;
+					line-height: 29px;
+					min-height: 29px;
+					.border-radius(2px);
+					.btn(@blue);
+					font-size: 14px;
+					border: none;
+					padding: 0;
+					color: #fff;
+					font-weight: bold;
+
+					&:hover {
+						cursor: pointer;
+						color: #fff;
+						.btn-hover(@blue);
+					}
+
+					&:active {
+						.btn-active(@blue);
+					}
+				}
+			}
+		}
+	}
+}
+
+// heading
+// ------------------------------------------------------------------------
+.heading_wrapper {
+	padding: 16px 17px 8px;
+	.clearfix();
+	float: left;
+	width: @hbrow-width - 34px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	top: -1px;
+	margin-bottom: -1px;
+
+	&:first-of-type {
+		border-top-color: #e8e8e8;
+	}
+
+	h3 {
+		font-size: 11px;
+		font-weight: bold;
+		line-height: 1;
+		margin: 0;
+		color: #999;
+		text-shadow: 0 1px 0 #fff;
+		text-transform: uppercase;
+	}
+}
+
+// Row & fields
+// ----------------------------------------------------------------------------
+.hb-row {
+	.clearfix();
+	float: left;
+	width: @hbrow-width - 32px - 2px;
+	background-color: #fff;
+	padding: 16px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #e5e5e5;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, .35);
+	overflow: hidden;
+
+	// Standard items
+	// ------------------------------------------------------------------------
+	label {
+		clear: both;
+		display: block;
+		font-size: 13px;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 8px;
+		cursor: default;
+
+		strong {
+			border-bottom: 1px solid #ccc;
+		}
+
+		em {
+			font-weight: normal;
+			font-style: normal;
+		}
+	}
+
+	// Commons 
+	// ------------------------------------------------------------------------
+	input[type=text],
+	textarea {
+		.transition(border .1s linear);
+		.border-radius(2px);
+		width: 360px;
+		padding: 8px;
+		margin: 0px;
+		border: 1px solid #ccc;
+		.box-shadow-inset(0, 2px, 0, 0, rgba(0,0,0,.08));
+		color: #999;
+
+		&:focus {
+			border-color: #999;
+			outline: none;
+			color: #333;
+		}
+	}
+
+	// Inputs
+	// ------------------------------------------------------------------------
+	input[type=text]{
+		font-size: 13px;
+
+		&[size] {
+			width: auto;
+		}
+	}
+
+	// Date
+	// ------------------------------------------------------------------------
+
+	.date {
+		cursor: pointer;
+	}
+
+	// Number
+	// ------------------------------------------------------------------------
+	.btn.increment,
+	.btn.decrement {
+		width: 24px;
+		height: 15px;
+		.border-radius(2px);
+		.btn(#bababa);
+		border: none;
+		display: inline-block;
+		font-weight: bold;
+		font-family: inherit;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		cursor: pointer;
+		.user-select(none);
+
+		&:hover {
+			.btn-hover(#bababa);
+		}
+
+		&:active {
+			.btn-active(#bababa);
+		}
+	}
+
+	.btn.increment { margin-left: 8px; }
+	.btn.decrement { margin-right: 8px; }
+
+	.number-wrapper {
+		padding-right: 25px;
+		position: relative;
+		float: left;
+
+		.numberfield {
+			.border-radius-right(0);
+			border-right: 0;
+		}
+
+		.btn {
+			line-height: 14px;
+			margin: 0;
+			position: absolute;
+			right: 0;
+			.border-radius(0);
+		}
+
+		.btn.increment {
+			top: 1px;
+			// .border-radius-top(2px);
+			.border-radius-top-right(2px);
+		}
+
+		.btn.decrement {
+			bottom: 1px;
+			// .border-radius-bottom(2px);
+			.border-radius-bottom-right(2px);
+		}
+	}
+
+	// Textarea
+	// ------------------------------------------------------------------------
+	textarea {
+		max-width: 360px;
+		font-size: 13px;
+	}
+
+	// Select
+	// ------------------------------------------------------------------------
+	.select-wrapper {
+		float: left;
+		width: 360px;
+		height: 33px;
+		border: 1px solid #ccc;
+		.border-radius(2px);
+		.vertical-gradient(#fff,#eaeaea);
+
+		&:hover, &:focus {
+			border-color: #bbb;
+		}
+
+		select {
+			.opacity(0);
+			position:relative;
+			z-index:4;
+			cursor:pointer;
+			margin:0;
+			padding:0;
+			width:inherit;
+			border: none;
+			height: 31px !important;
+		}
+
+		span {
+			position: absolute;
+			z-index: 2;
+			background: url(../i/select_arrows.png) no-repeat 342px center;
+			width: inherit; 
+			height: 31px;
+			line-height: 31px;
+			padding-left: 8px;
+			color: #555;
+			// font-weight: bold;
+			text-shadow: 0 1px 0 #fff;
+			font-size: 12px;
+			text-align: left;
+		}
+	}
+
+	// Color
+	// ------------------------------------------------------------------------
+	.color {
+		cursor: pointer;
+	}
+
+	// Stripe
+	// ------------------------------------------------------------------------
+	&.stripe {
+		.select-wrapper-columns-layout {
+			margin-top: 10px;
+		}
+	}
+
+	// Upload
+	// ------------------------------------------------------------------------
+	.upload-container {
+		width: 360px;
+		float: left;
+
+		.img-container {
+			position: relative;
+			width: 140px;
+			height: 140px;
+			.border-radius(2px);
+			border: 1px solid #ccc;
+			background: #ececec;
+			.box-shadow-inset(0, 2px, 3px, 0, rgba(0,0,0,.1));
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.reset-upload-btn,
+			.upload-btn {
+				&.hidden {
+					display: none;
+				}
+			}
+
+			.reset-upload-btn {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+
+			.upload-btn {
+				position: absolute;
+				left: 17px;
+				top: 54px;
+				.btn(@blue);
+				border: none;
+				cursor: pointer;
+				color: #fff;
+				padding: 8px 32px;
+				.border-radius(2px);
+				font-weight: bold;
+
+				&:hover {
+					.btn-hover(@blue);
+				}
+
+				&:active {
+					.btn-active(@blue);
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------
+// Metabox fields
+// ----------------------------------------------------------------------------
+.postbox {
+	.inside {
+		.clearfix();
+
+		.field_container {
+			float: left;
+			margin-top: 41px;
+
+			&.super_container {
+				margin-top: 0;
+				float: left;
+				width: 100%;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: -10px;
+				
+				border-bottom: 1px solid #e5e5e5;
+				box-shadow: 0 1px 0 0 rgba(255, 255, 255, .35);
+			}
+
+			.hb-row {
+				padding-left: 20px;
+				padding-bottom: 0;
+				padding-top: 0;
+
+				label {
+					display: block;
+					clear: left;
+					float: left;
+					line-height: 33px;
+					width: 80px;
+				}
+
+				input[type="text"],
+				textarea {
+					float: left;
+					width: 360px;
+				}
+			}
+		}
+
+		.hb-help {
+			float: left;
+			margin: 0 0 0 16px;
+
+			p {
+				margin: 8px 0;
+			}
+		}
+
+		.hb-row {
+			margin-left: -10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-left: none;
+			border-right: none;
+			width: 100%;
+			background: transparent;
+			box-shadow: none;
+			border-bottom: none;
+
+			&:last-of-type {
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 6px;
+			}
+
+			label {
+				// display: none;
+				cursor: default;
+				font-weight: bold;
+			}
+
+			&.upload {
+				width: 140px;
+				float: left;
+			}
+
+			&.notitle {
+				float: left;
+				width: auto;
+				clear: left;
+
+				label {
+					font-weight: normal;
+					color: #999;
+				}
+
+				&.clear {
+					clear: both;
+				}
+
+			}
+
+			/*
+			&.notitle {
+				border-bottom: none;
+				padding-top: 0;
+				padding-bottom: 0;
+				float: left;
+				width: 440px;
+				position: relative;
+				top: 10px;
+
+				label {
+					display: block;
+					clear: left;
+					float: left;
+					line-height: 33px;
+					width: 80px;
+				}
+
+				&.lastrow {
+					border-bottom: 1px solid #ccc;
+					padding-bottom: 10px;
+					margin-bottom: 16px;
+					padding-left: 150px;
+					margin-left: -150px;
+					padding-right: 0;
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+				}
+
+				&.firstrow {
+					padding-top: 10px;
+					margin-bottom: 38px;
+					width: 140px;
+					float: left;
+					clear: left;
+					top: 0;
+
+					label {
+						display: none;
+						float: none;
+						width: 100%;
+					}
+
+					margin-bottom: 10px;
+				}
+			}
+			*/
+		}
+	}
+}
+
+// Side metabox fields
+// --------------------------------------------------------------------------
+.inner-sidebar {
+	.postbox {
+		.inside {
+			.hb-row {
+				.select-wrapper {
+					width: 100%;
+
+					span {
+						background-position: 241px center;
+					}
+				}
+
+				.hb-help {
+					clear: both;
+					float: left;
+
+					p:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+
+				input[type="text"],
+				textarea {
+					float: left;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Font fields
+// --------------------------------------------------------------------------
+.googlefont {
+	position: relative;
+
+	.font-face-container,
+	.font-options-container,
+	.font-weight,
+	.font-style,
+	.font-size,
+	.font-lineheight,
+	.font-color {
+		float: left;
+		margin-right: 16px; 
+
+		label {
+			font-weight: normal;
+			font-size: 11px;
+			color: #999;
+		}
+	}
+
+	.font-face-container {
+		.select-wrapper {
+			width: 200px;
+
+			span {
+				background-position: 184px center;
+			}
+		}
+	}
+
+	.font-weight {
+		margin-right: 0;
+	}
+
+	.font-weight,
+	.font-style {
+		label {
+			display: none;
+		}
+
+		span.btn {
+			margin-top: 25px;
+			width: 24px;
+			line-height: 31px;
+			.border-radius(2px);
+			.btn(@light-grey);
+			border: none;
+			display: inline-block;
+			font-weight: bold;
+			font-family: inherit;
+			font-size: 13px;
+			color: #666;
+			text-shadow: 0 1px 0 #fff;
+			text-align: center;
+			cursor: pointer;
+			padding: 0;
+
+			&.italic {
+				font-family: Georgia, serif;
+				font-style: italic;
+				text-transform: lowercase;
+				.border-radius-left(0);
+				border-left: none;
+			}
+
+			&.bold {
+				.border-radius-right(0);
+			}
+
+			&.switch-on {
+				color: #fff;
+				.btn(@blue);
+
+				&:hover {
+					.btn-hover(@blue);
+				}
+
+				&:active {
+					.btn-active(@blue);
+				}
+			}
+
+			&:hover {
+				.btn-hover(@light-grey);
+			}
+
+			&:active {
+				.btn-active(@light-grey);
+			}
+		}
+	}
+
+	.font-color {
+		margin-right: 0;
+	}
+
+	.fontpreview {
+		clear: both;
+		float: left;
+		width: 100%;
+		margin-top: 20px;
+	}
+}
+
+// Date
+// ------------------------------------------------------------------------
+.ui-datepicker {
+	background: #fff;
+	.box-shadow(0, 1px, 7px, 0, rgba(0,0,0,.2));
+	padding: 10px;
+
+	.ui-icon {
+		cursor: pointer;
+	}
+
+	.ui-datepicker-prev {
+		float: left;
+		width: 45%;
+
+		.ui-icon {
+			text-indent: 0;
+		}
+	}
+
+	.ui-datepicker-next {
+		float: right;
+		text-align: right;
+		width: 45%;
+
+		.ui-icon {
+			text-indent: 0;
+		}
+	}
+
+	.ui-datepicker-title {
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		float: left;
+		width: 100%;
+		clear: both;
+		text-align: center;
+		font-weight: bold;
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+
+	.ui-datepicker-calendar {
+		th, td {
+			text-align: center;
+			padding: 3px;
+
+			&.ui-datepicker-today {
+				background: #eee;
+			}
+
+			&.ui-datepicker-current-day {
+				background: #ddd;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// Widgets enhancements
+// ------------------------------------------------------------------------
+
+body #widgets-left .widget-holder .widget.thb {
+	.widget-top {
+		.border-radius-left(0);
+		border-left: 2px solid #d3404a;
+	}
+}
+
+body #widgets-right .widgets-sortables .widget.thb {
+	.border-radius-left(0);
+	border-left: 0;
+
+	.widget-top {
+		margin-top: -1px;
+		border-left: 2px solid #d3404a;
+	}
+}
+
+// Works table adjustments
+/* Custom post table */
+.wp-list-table .column-thb_post_thumbs {
+	width: 58px;
+}
+.wp-list-table .column-thb_post_categories {
+	width: 20%;
+}
