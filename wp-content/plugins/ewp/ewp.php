@@ -48,7 +48,7 @@ function ewp_update_db_check() {
         ewp_install();
     }
 }
-add_action( 'plugins_loaded', 'ewp_update_db_check' );
+// add_action( 'plugins_loaded', 'ewp_update_db_check' );
 
 
 add_action( 'wp_enqueue_scripts', 'prefix_add_my_stylesheet' );
@@ -230,6 +230,7 @@ function register_shortcode(){
 //	add_shortcode('home-address', 'home_address');
 //	add_shortcode('facebook-page', 'facebook_page');
 //	add_shortcode('home-ads', 'show_home_ads');
+	add_shortcode('news-box', 'news_box');
 }
 
 add_action('init', 'register_shortcode');
@@ -326,6 +327,100 @@ function saveContact($email = null){
 		exit("Có lỗi xảy ra, vui lòng thử lại!");  	
     }
 }
+
+function news_box($atts){
+	extract(shortcode_atts(array(
+		'category' => '',
+		'title' => '',
+		'url' => '',
+		'inline' => 0
+	), $atts));
+	$str = '';
+	$child = '';
+	if($category){
+		$queryObject = new  Wp_Query( array(
+			'showposts' => 4,
+			'post_type' => array('post'),
+			'category_name' => $category,
+			'orderby' => 1
+		));
+		
+		if($queryObject->have_posts()):
+			$cat = get_category_by_slug($category);
+			$class = ($inline) ? 'inline' : '';
+			
+			$str = '
+			<div class="news-box ' . $class . '">
+				<div class="news-box-title">';
+					if($title)
+						$str .= '<a href="' . $url . '" title="' . $title .'">' . $title .'</a>';
+					else
+						$str .= '<a href="' . get_category_link($cat->term_id) . '" title="' . $cat->name .'">' . $cat->name .'</a>';
+				$str .='
+				</div>
+				<div class="news-box-nav">
+					<ul>';
+			$childCategories = get_categories(array('child_of' => $cat->term_id, 'hide_empty' => 0, 'parent' => $cat->term_id));
+			foreach($childCategories as $category):
+				$str .= '
+				<li class="category-link">
+					<a href="' . get_category_link($category->term_id) . '" title="' . $category->name . '">' . $category->name . '</a>
+				</li>';
+			endforeach;
+			$str .= '
+					</ul>
+				</div>
+				<ul>';
+				$i = 0;
+			while($queryObject->have_posts()):
+				$queryObject->the_post();
+				if(!$i):
+					$str .= 
+						'<li class="first-news news-post">';
+
+							add_image_size( 'thumbnail', 300, 200, true );
+							$thumb = get_the_post_thumbnail(get_the_ID(), 'my-custom-thumb', 'class=post-thumb');							
+							$permalink = get_permalink();
+							$str .=
+							'<a class="title" href="' . $permalink . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+								$thumb .
+							'</a>' .
+							'<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">
+								' . wp_specialchars(get_the_title(), 1) . '
+							</a>' .
+							'<p>' . get_the_excerpt() . '</p>
+						</li>';
+				else:
+					$child .= '
+					<li>
+						<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">
+							' . wp_specialchars(get_the_title(), 1) . '
+						</a>					
+					</li>';
+				endif;
+				$i++;
+			endwhile;
+			
+			$str .= 
+				'<li class="news-post">
+					<ul>
+						' . $child . '
+					</ul>
+				</li>';
+				
+			$str .= '
+				</ul>
+					<div class="readmore-text">
+						<a class="pull-right" href="' . (($url) ? $url : get_category_link($cat->term_id)) . '" title="Xem tiếp">
+							Xem tiếp
+						</a>						
+					</div>
+			</div>';
+		endif;		
+	}
+	return $str;
+}
+
 
 /*********Amin area*******/
 
