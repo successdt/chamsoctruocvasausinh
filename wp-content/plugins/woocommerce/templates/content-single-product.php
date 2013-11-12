@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
+
 	<?php
 		/**
 		 * woocommerce_show_product_images hook
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	?>
 
 	<div class="summary entry-summary">
-		<h3 class="product-title single-prodcut"><?php the_title(); ?></h3>
+
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -46,7 +46,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
-		 	
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 

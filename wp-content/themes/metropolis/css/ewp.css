@@ -1,3 +1,116 @@
+
 .content-wrapper.box-col.span-8 {
 	width: 680px;
+	background: #FFF;
+}
+.home.page .content-wrapper {
+	background: transparent;
+}
+.content {
+	margin: 10px 20px;
+	width: 680px;
+	background: #FFF
+}
+.home.page .content {
+	margin: 0;
+	background: transparent;
+}
+.footer-container {
+	width: 100%;
+	background: #388E26;
+	float: left;
+}
+#footer {
+	width: 1000px;
+	float: none;
+	margin: 0 auto;
+	display: block;
+}
+#footer a {
+	color: #FFF !important;
+}
+#sub-nav {
+	width: 100%;
+	text-align: center;
+	float: left !important;
+	padding: 10px 0;
+}
+#sub-nav ul {
+	float: none !important;
+	margin: 0 auto;
+	display: table;
+}
+#sub-nav li {
+	border: none;
+}
+#copyright {
+	width: 300px;
+	margin: 0 auto;
+	float: none !important;
+}
+.sidebar-right #main-sidebar  .widget.block {
+	background: #FFF;
+	margin-bottom: 10px;
+}
+.sidebar-right #main-sidebar  .widget.block .textwidget, .sidebar-right #main-sidebar  .widget.block ul {
+	padding: 10px;
+}
+.sidebar-right #main-sidebar  .widget.block .side-post {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 290px;
+}
+.sidebar-right #main-sidebar .col {
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+	width: 310px;
+}
+#header {
+	width: 100%;
+	background: #FFF;
+}
+#logo {
+	width: 1000px;
+	margin: 20px auto;
+}
+#menu-top-menu {
+	width: 1000px;
+	float: none !important;
+	margin: 10px auto;
+
+}
+#main-nav {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(bottom, #388E26 0%, #41A632 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(bottom, #388E26 0%, #41A632 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(bottom, #388E26 0%, #41A632 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #388E26), color-stop(1, #41A632));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(bottom, #388E26 0%, #41A632 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to top, #388E26 0%, #41A632 100%);	
+}
+#main-nav > ul > li > a {
+	color: #FFF;
+}
+.slideshow-wrapper  {
+	position: relative;
+}
+.news-box-title {
+	padding: 10px;
+	background: #388E26;
+	border-left: 5px solid #C00101; 
+}
+#main-sidebar .widget.primary h3 {
+	padding: 10px;
+	background: #388E26;
+	border-left: 5px solid #C00101;
+	color: #FFF;
+}
+#main-sidebar .widget.primary header {
+	margin-bottom: 5px;
 }

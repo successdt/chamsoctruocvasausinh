@@ -89,3 +89,8 @@ add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
 function custom_call_for_price() {
      return 'Liên hệ';
 }
+if (function_exists('add_theme_support')) {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 75, 75, true ); // default thumbnail size
+	add_image_size('my-custom-thumb', 320, 200, true); //custom size
+}

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $product, $woocommerce_loop;
 
-$related = $product->get_related();
+$related = $product->get_related( $posts_per_page );
 
 if ( sizeof( $related ) == 0 ) return;
 
@@ -33,7 +33,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
 
-		<div class="related-posts-title"><?php _e( 'Related Products', 'woocommerce' ); ?></div>
+		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

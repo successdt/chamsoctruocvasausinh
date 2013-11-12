@@ -22,7 +22,7 @@ if ( empty( $woocommerce_loop['columns'] ) )
 	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
 
 // Ensure visibility
-if ( ! $product->is_visible() )
+if ( ! $product || ! $product->is_visible() )
 	return;
 
 // Increase loop count
@@ -64,6 +64,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
 	</a>
 
-	<?php // do_action( 'woocommerce_after_shop_loop_item' ); ?>
+	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 </li>
