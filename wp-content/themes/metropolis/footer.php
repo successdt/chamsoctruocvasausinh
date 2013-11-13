@@ -15,7 +15,12 @@
 				<span> &mdash; <?php echo $copyright; ?></span>
 				<?php endif; ?>
 			</small>
-		</footer>	
+			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+				<div class="widget-area footer-widgets" role="complementary">
+					<?php dynamic_sidebar( 'sidebar-1' ); ?>
+				</div>
+			<?php endif; ?>
+		</footer>
 	</div>	
 		<?php wp_footer(); ?>
 	</body>

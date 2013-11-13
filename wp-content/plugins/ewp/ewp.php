@@ -422,7 +422,46 @@ function news_box($atts){
 }
 
 
+/**
+ * get child categories of current category
+ */
+function ewp_get_child_categories(){
+	if (is_category()) {
+		$term_id = get_query_var('cat');
+		$args = array(
+			'type'                     => 'post',
+			'child_of'                 => $term_id,
+			'parent'                   => '',
+			'orderby'                  => 'name',
+			'order'                    => 'ASC',
+			'hide_empty'               => 1,
+			'hierarchical'             => 1,
+			'exclude'                  => '',
+			'include'                  => '',
+			'number'                   => '',
+			'taxonomy'                 => 'category',
+			'pad_counts'               => false 
+		);
+		$categories = get_categories( $args );
+		$str = '';
+		foreach($categories as $category) {
+			$taxonomy_image_url = get_option('z_taxonomy_image' . $category->term_id);
+			$category_url = get_category_link($category);
+			
+			$str .= '
+				<div class="child-cat">
+					<a href="' . $category_url . '" title="">
+						<img class="cat-thumb" src="' . $taxonomy_image_url . '" alt="' . $category->name .'" />
+					</a>
+					<a href="' . $category_url . '" title="">
+						<h4 class="child-title">' . $category->name .'</h4>
+					</a>
+				</div>';
+		}
+		return $str;
+	}
+			
+}
 /*********Amin area*******/
 
 ?>
-
