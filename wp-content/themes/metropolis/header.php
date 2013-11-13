@@ -152,4 +152,5 @@ $body_classes             = get_custom_body_classes();
 
 	<div id="main-container" class="extended-container">
 		<section class="content-wrapper box-col span-<?php if( in_array("wout-sidebar", $body_classes) ) : ?>12<?php else : ?>8<?php endif; ?>">
-			<div class="content col span-<?php if( in_array("wout-sidebar", $body_classes) ) : ?>12<?php else : ?>8<?php endif; ?>">
+<?php /*<div class="content col span-<?php if( in_array("wout-sidebar", $body_classes) ) : ?>12<?php else : ?>8<?php endif; ?>">*/ ?>			
+			<div class="content col">

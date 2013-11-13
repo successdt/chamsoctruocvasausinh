@@ -94,3 +94,19 @@ if (function_exists('add_theme_support')) {
 	set_post_thumbnail_size( 75, 75, true ); // default thumbnail size
 	add_image_size('my-custom-thumb', 320, 200, true); //custom size
 }
+
+function wpb_widgets_init() {
+
+	register_sidebar( array(
+		'name' => __( 'Footer', 'wpb' ),
+		'id' => 'footer',
+		'description' => __( 'Hiển thị ở phần cuối của trang web', 'wpb' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+}
+
+add_action( 'widgets_init', 'wpb_widgets_init' );

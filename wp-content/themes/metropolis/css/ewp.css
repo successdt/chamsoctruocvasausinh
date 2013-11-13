@@ -8,12 +8,15 @@
 }
 .content {
 	margin: 10px 20px;
-	width: 680px;
 	background: #FFF
+}
+#main-container {
+	padding-top: 0;
 }
 .home.page .content {
 	margin: 0;
 	background: transparent;
+	width: 680px;
 }
 .footer-container {
 	width: 100%;
@@ -113,4 +116,17 @@
 }
 #main-sidebar .widget.primary header {
 	margin-bottom: 5px;
+}
+.category-image {
+	width: 680px;
+	height: auto;
+	margin-left: -20px;
+	margin-top: -10px;
+}
+.child-cat {
+	width: 210px;
+	float: left;
+}
+.child-cat + .child-cat {
+	margin-left: 15px;
 }
