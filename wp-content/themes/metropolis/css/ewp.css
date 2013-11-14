@@ -123,10 +123,35 @@
 	margin-left: -20px;
 	margin-top: -10px;
 }
+.content .page-header {
+	width: 645px;
+}
+.child-cats {
+	display: table;
+}
 .child-cat {
 	width: 210px;
 	float: left;
 }
 .child-cat + .child-cat {
-	margin-left: 15px;
+	margin-left: 5px;
 }
+.item-wrapper footer {
+	display: none;
+}
+.list.type-1 .item-image {
+	width: 23%;
+}
+.list.type-1 .item-wrapper {
+	width: 73%;
+}
+.post .meta {
+	display: none;
+}
+.single .text {
+	width: auto;
+	float: left;
+}
+.single .item-image {
+	display: none;
+} 

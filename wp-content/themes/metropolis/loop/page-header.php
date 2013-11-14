@@ -8,7 +8,9 @@
 		94 => '/wp-content/uploads/2013/11/dich-vu.png',
 		95 => '/wp-content/uploads/2013/11/dich-vu.png',
 		96 => '/wp-content/uploads/2013/11/dich-vu.png',
-		97 => '/wp-content/uploads/2013/11/dich-vu.png'
+		97 => '/wp-content/uploads/2013/11/nguyelieu.png',
+		98 => '/wp-content/uploads/2013/11/blog.png',
+		101 => '/wp-content/uploads/2013/11/blog.png'
 	);
 ?>
 	<?php if( isset($pagetitle) ) : ?>
