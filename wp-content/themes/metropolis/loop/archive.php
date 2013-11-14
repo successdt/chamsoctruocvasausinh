@@ -10,7 +10,7 @@
 	 */
 	$post_id     = get_the_ID();
 	$post_format = get_post_format();
-	$image       = thb_get_featured_image($post_id, "thumbnail");
+	$image       = thb_get_featured_image($post_id, array(150, 100));
 	$image_full  = thb_get_featured_image($post_id, "full");
 
 	/**
