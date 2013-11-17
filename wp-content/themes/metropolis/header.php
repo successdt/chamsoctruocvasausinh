@@ -134,8 +134,10 @@ $body_classes             = get_custom_body_classes();
 				if( empty($logo_position) ) $logo_position = "left";
 			?>
 			<h1 id="logo" class="<?php echo $logo_position; ?>">
-				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</h1>
+				    <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			         <img src="/wp-content/uploads/2013/11/banner.png" alt="banner" class="static-banner"/>
+            </h1>
+            
 			<nav id="main-nav" class="primary menu">
 				<?php wp_nav_menu( array( 'container' => '', 'container_class' => '', 'theme_location' => 'primary' ) ); ?>
 			</nav>

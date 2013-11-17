@@ -4779,3 +4779,9 @@ a.custom-btn:active {
     padding: 10px 0;
   }
 }
+
+.static-banner{
+    float: right;
+    position: relative;
+    margin-top: -70px;
+}
