@@ -95,8 +95,8 @@ a:active {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 187px;
-  height: 27px;
+  width: 250px;
+  height: 65px;
   outline: none;
   background: url("i/logo.png") no-repeat;
 }
@@ -4778,4 +4778,10 @@ a.custom-btn:active {
   .pricing-table .plan.featured .plan-footer {
     padding: 10px 0;
   }
+}
+
+.static-banner{
+    float: right;
+    position: relative;
+    margin-top: -70px;
 }
