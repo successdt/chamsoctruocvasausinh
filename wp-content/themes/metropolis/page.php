@@ -8,7 +8,7 @@
 get_header();
 
 $page_id      = get_the_ID();
-$sidebar      = thb_get_post_meta($page_id, "_page_sidebar");var_dump($sidebar);
+$sidebar      = thb_get_post_meta($page_id, "_page_sidebar");
 $image        = thb_get_featured_image($page_id, "large");
 $image_full   = thb_get_featured_image($page_id, "full");
 ?>
