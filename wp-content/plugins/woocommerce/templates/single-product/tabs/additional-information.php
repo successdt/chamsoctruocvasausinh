@@ -13,7 +13,7 @@ global $woocommerce, $post, $product;
 
 $heading = apply_filters( 'woocommerce_product_additional_information_heading', __( 'Additional Information', 'woocommerce' ) );
 ?>
-
+<?php /*
 <h2><?php echo $heading; ?></h2>
-
+*/ ?>
 <?php $product->list_attributes(); ?>

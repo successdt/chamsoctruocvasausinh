@@ -11,9 +11,13 @@ $page_id      = get_the_ID();
 $sidebar      = thb_get_post_meta($page_id, "_page_sidebar");
 $image        = thb_get_featured_image($page_id, "large");
 $image_full   = thb_get_featured_image($page_id, "full");
+
+if(!$sidebar)
+	$sidebar = 'primary-widget-area';
 ?>
 		
 		<?php
+		/*
 			$pagetitle    = get_the_title();
 			$pagesubtitle =  thb_get_post_meta($page_id, "_page_subtitle");
 			if( !is_front_page() || is_front_page() && thb_get_option("_homepage_pageheader") == "0" ) :
@@ -33,7 +37,7 @@ $image_full   = thb_get_featured_image($page_id, "full");
 				<span class="overlay"></span>
 				<img src="<?php echo $image; ?>" alt="">
 			</a>
-		<?php endif; ?>
+		<?php endif; */ ?>
 
 		<div class="text">
 			<div class="woocommerce">

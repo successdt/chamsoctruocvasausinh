@@ -245,6 +245,10 @@ if(!function_exists("get_custom_body_classes")) {
 
 			$classes[] = "sidebar-" . $position;
 		}
+		elseif (($page_id) && (get_post_type($page_id) == 'product')) {
+			$classes[] = 'w-sidebar';
+			$classes[] = 'sidebar-right';
+		}
 		else
 			$classes[] = "wout-sidebar";
 

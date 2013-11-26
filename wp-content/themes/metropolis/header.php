@@ -58,7 +58,7 @@ $body_classes             = get_custom_body_classes();
 			wp_enqueue_script('jquery');  // jQuery including by wordpress 
 			wp_enqueue_script('flexslider'); // jQuery Cycle plugin
 			wp_enqueue_script('cycle'); // jQuery Flexslider plugin
-			wp_enqueue_script('prettyphoto'); // Prettyphoto plugin
+//			wp_enqueue_script('prettyphoto'); // Prettyphoto plugin
 			wp_enqueue_script('thb-lib'); // Main theme settings file
 			wp_enqueue_script('swfobject'); // Swfobject lib
 			wp_enqueue_script('froogaloop'); // Froogaloop lib

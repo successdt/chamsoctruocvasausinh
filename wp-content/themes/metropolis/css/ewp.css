@@ -154,4 +154,26 @@
 }
 .single .item-image {
 	display: none;
-} 
+}
+
+.woocommerce h1.page-title, .related.products h2 {
+	margin-bottom: 15px;
+	padding-bottom: 16px;
+	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 645px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1.15;
+	color: #111111;
+}
+.woocommerce div.product .product_title, .woocommerce #content div.product .product_title, .woocommerce-page div.product .product_title, .woocommerce-page #content div.product .product_title {
+	font-size: 22px ;
+}
+.woocommerce .related ul.products li.product, .woocommerce .related ul li.product {
+	width: 200px !important;
+}
+p.price, .woocommerce-page div.product p.price {
+	color: #C00101 !important ;
+}
