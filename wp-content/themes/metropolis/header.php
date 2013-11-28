@@ -147,7 +147,8 @@ $body_classes             = get_custom_body_classes();
 
 		<?php 
 			if( in_array("w-slideshow", $body_classes) )
-				get_template_part("loop/slideshow");
+				//get_template_part("loop/slideshow");
+				echo do_shortcode("[metaslider id=80]");
 		?>
 		
 	<?php if( is_front_page() ) get_template_part("page-top-sidebar"); ?>
