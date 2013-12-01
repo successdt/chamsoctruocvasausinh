@@ -75,7 +75,7 @@
 }
 #logo {
 	width: 1000px;
-	margin: 20px auto;
+	margin: 2px auto;
 }
 #menu-top-menu {
 	width: 1000px;
@@ -176,4 +176,13 @@
 }
 p.price, .woocommerce-page div.product p.price {
 	color: #C00101 !important ;
+}
+
+#metaslider_container_80{
+	width: 1200px;
+	height: 394px;
+	background-color: #fff;
+	margin-left: -102px;
+	
+
 }
