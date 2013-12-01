@@ -133,6 +133,10 @@
 	width: 210px;
 	float: left;
 }
+.child-cats img {
+width: 210px;
+height: 120px;
+}
 .child-cat + .child-cat {
 	margin-left: 5px;
 }
@@ -185,4 +189,10 @@ p.price, .woocommerce-page div.product p.price {
 	margin-left: -102px;
 	
 
+}
+
+#main-slider{
+	width: 100%;
+	height: 394px;
+	background-color: #fff;
 }
