@@ -200,3 +200,7 @@ p.price, .woocommerce-page div.product p.price {
 .page-header h1{
 	padding: 10px 0 10px 0;
 }
+#logo a {
+height: 125px;
+width: 220px;
+}
