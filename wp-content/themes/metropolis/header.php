@@ -151,7 +151,7 @@ $body_classes             = get_custom_body_classes();
 				echo do_shortcode("[metaslider id=80]");
 		?>
 		
-	<?php if( is_front_page() ) get_template_part("page-top-sidebar"); ?>
+	<?php //if( is_front_page() ) get_template_part("page-top-sidebar"); ?>
 
 	<div id="main-container" class="extended-container">
 		<section class="content-wrapper box-col span-<?php if( in_array("wout-sidebar", $body_classes) ) : ?>12<?php else : ?>8<?php endif; ?>">
