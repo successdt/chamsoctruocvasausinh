@@ -209,4 +209,4 @@ width: 220px;
 display: none;
 }
 
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 30.5%}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 30.5% !important}
