@@ -81,7 +81,7 @@
 		<div class="text">
 			<?php
 				$excerpt = get_the_excerpt();
-				$excerpt = thb_truncate($excerpt, 150);
+				//$excerpt = thb_truncate($excerpt, 150);
 				echo apply_filters('the_content', $excerpt);
 			?>
 		</div>
