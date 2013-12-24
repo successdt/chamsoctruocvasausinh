@@ -208,3 +208,5 @@ width: 220px;
 .content .page-header h2{
 display: none;
 }
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 30.5%}
